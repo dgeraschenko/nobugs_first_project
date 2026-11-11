@@ -1,8 +1,10 @@
 package practice_2;
 
+import practice_4.Library;
+
 public class MathOperations {
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
 
         int add_1 = add(4, 6);
 
@@ -210,6 +212,8 @@ public class MathOperations {
 
 
     }
+
+
 
 
 }

@@ -2,47 +2,45 @@ package practice_4;
 
 public class Company {
 
+    // статическое поле общее для всех объектов класса
+    static String companyName = "ООО Ромашка";
 
-    // поля
-    static String companyName;
+    // после инициализации этой переменной её нельзя будет изменить
+    final int EMPLOYEE_ID;
 
-    static {
-        companyName = "ООО Ромашка-22";
-    }
-
-    final int employeeID = 101;
-
+    // без модификатора доступа - доступна всем в текущем пакете
     String employeeName;
 
-
     // конструктор
-    public Company(int employeeID, String employeeName) {
 
+    public Company(int EMPLOYEE_ID, String employeeName) {
+
+        // после инициализации нельзя будет изменить
+        this.EMPLOYEE_ID = EMPLOYEE_ID;
+        // можно будет изменить
         this.employeeName = employeeName;
 
     }
 
     // геттеры
-    public String getEmployeeName() {
+    String getEmployeeName() {
         return this.employeeName;
     }
-
 
     // сеттеры
     void setEmployeeName(String employeeName) {
         this.employeeName = employeeName;
     }
 
-    // print
-
-    void  printInfo() {
-
-        System.out.println("companyName: " + companyName);
-        System.out.println("employeeID: " + employeeID);
-        System.out.println("employeeName: " + employeeName);
-
-
+    // методы
+    static void printCompanyName() {
+        System.out.println("Название компании: " + companyName);
     }
 
-
+    void printInfo() {
+        System.out.println("companyName: " + companyName);
+        System.out.println("employeeID: " + EMPLOYEE_ID);
+        System.out.println("employeeName: " + employeeName);
+        System.out.println();
+    }
 }
