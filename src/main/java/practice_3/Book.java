@@ -19,7 +19,7 @@ public class Book {
     }
 
     public String getAuthor() {
-        return this.title;
+        return this.author;
     }
 
 
